@@ -14,12 +14,14 @@ namespace MetroToDoList
 
     public partial class Menu : MetroFramework.Forms.MetroForm
     {
+        DetailTask det = new DetailTask();
         AddTask agr = new AddTask();
         Task task = new Task();
         List<Task> tasks = new List<Task>();
         int TaskID = 1;
         public Menu()
         {
+           
             InitializeComponent();
         }
 
@@ -31,28 +33,27 @@ namespace MetroToDoList
 
         private void MBAddTask_Click(object sender, EventArgs e)
         {
+            CleanAdd();
+            agr.ShowDialog();
             Agregar();
         }
         public void Agregar()
         {
-            CleanAdd();
-            agr.Show();
             task.ID = TaskID;
             task.User = agr.MTxtCatchUser.Text;
-            task.TaskName = agr.MTxtCatchUser.Text;
+            task.TaskName = agr.MTxtCatchName.Text;
             task.Description = agr.MTxtCatchDetails.Text;
             task.Hour = agr.MTxtCatchHour.Text;
             task.Status = agr.CBoxStatus.Text;
             tasks.Add(task);
-            int print = MGridTasks.Rows.Add();
-            MGridTasks.Rows[print].Cells[0].Value = TaskID;
-            MGridTasks.Rows[print].Cells[1].Value = task.TaskName;
+            MGridTasks.Rows.Add(TaskID,task.TaskName);
+            agr.Hide();
             TaskID++;
         }
         public void CleanAdd() 
         {
             agr.MTxtCatchUser.Clear();
-            agr.MTxtCatchUser.Clear();
+            agr.MTxtCatchName.Clear();
             agr.MTxtCatchDetails.Clear();
             agr.MTxtCatchHour.Clear();
         }
@@ -65,6 +66,23 @@ namespace MetroToDoList
         private void MBtnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void MBDetailTask_Click(object sender, EventArgs e)
+        {
+            CleanDet();
+            det.taskies = tasks;
+            det.ShowDialog();
+        }
+        private void CleanDet() 
+        {
+            det.MTxtSearch.Text = null;
+            det.MTxtShowDetails.Text = null;
+            det.MTxtShowHour.Text = null;
+            det.MCboxNewStatus.Text = null;
+            det.MTxtShowUser.Text = null;
+            det.MTxtShowTask.Text = null;
+
         }
     }
 }

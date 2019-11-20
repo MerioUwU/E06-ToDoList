@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MBAddTask = new MetroFramework.Controls.MetroButton();
             this.MBDetailTask = new MetroFramework.Controls.MetroButton();
-            this.MBFilter = new MetroFramework.Controls.MetroButton();
             this.MLWelcome = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.MGridTasks = new MetroFramework.Controls.MetroGrid();
@@ -63,15 +62,7 @@
             this.MBDetailTask.TabIndex = 4;
             this.MBDetailTask.Text = "Detallar una tarea";
             this.MBDetailTask.UseSelectable = true;
-            // 
-            // MBFilter
-            // 
-            this.MBFilter.Location = new System.Drawing.Point(23, 316);
-            this.MBFilter.Name = "MBFilter";
-            this.MBFilter.Size = new System.Drawing.Size(200, 42);
-            this.MBFilter.TabIndex = 5;
-            this.MBFilter.Text = "Filtrar por Estatus";
-            this.MBFilter.UseSelectable = true;
+            this.MBDetailTask.Click += new System.EventHandler(this.MBDetailTask_Click);
             // 
             // MLWelcome
             // 
@@ -104,26 +95,26 @@
             this.MGridTasks.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MGridTasks.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.MGridTasks.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MGridTasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MGridTasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.MGridTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MGridTasks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnID,
             this.ColumnName});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MGridTasks.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MGridTasks.DefaultCellStyle = dataGridViewCellStyle5;
             this.MGridTasks.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MGridTasks.EnableHeadersVisualStyles = false;
             this.MGridTasks.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -131,14 +122,14 @@
             this.MGridTasks.Location = new System.Drawing.Point(0, 0);
             this.MGridTasks.Name = "MGridTasks";
             this.MGridTasks.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MGridTasks.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MGridTasks.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.MGridTasks.RowHeadersWidth = 51;
             this.MGridTasks.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.MGridTasks.RowTemplate.Height = 24;
@@ -152,19 +143,19 @@
             this.ColumnID.HeaderText = "#";
             this.ColumnID.MinimumWidth = 6;
             this.ColumnID.Name = "ColumnID";
-            this.ColumnID.Width = 125;
+            this.ColumnID.Width = 25;
             // 
             // ColumnName
             // 
             this.ColumnName.HeaderText = "Tarea a Realizar";
             this.ColumnName.MinimumWidth = 6;
             this.ColumnName.Name = "ColumnName";
-            this.ColumnName.Width = 125;
+            this.ColumnName.Width = 325;
             // 
             // MLTaskCount
             // 
             this.MLTaskCount.AutoSize = true;
-            this.MLTaskCount.Location = new System.Drawing.Point(459, 50);
+            this.MLTaskCount.Location = new System.Drawing.Point(273, 50);
             this.MLTaskCount.Name = "MLTaskCount";
             this.MLTaskCount.Size = new System.Drawing.Size(66, 20);
             this.MLTaskCount.TabIndex = 8;
@@ -189,7 +180,6 @@
             this.Controls.Add(this.MLTaskCount);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.MLWelcome);
-            this.Controls.Add(this.MBFilter);
             this.Controls.Add(this.MBDetailTask);
             this.Controls.Add(this.MBAddTask);
             this.Name = "Menu";
@@ -206,14 +196,13 @@
 
         public MetroFramework.Controls.MetroButton MBAddTask;
         public MetroFramework.Controls.MetroButton MBDetailTask;
-        public MetroFramework.Controls.MetroButton MBFilter;
         public MetroFramework.Controls.MetroLabel MLWelcome;
         public MetroFramework.Controls.MetroPanel metroPanel1;
         public MetroFramework.Controls.MetroLabel MLTaskCount;
         public MetroFramework.Controls.MetroGrid MGridTasks;
-        public System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
-        public System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
         public MetroFramework.Controls.MetroButton MBtnSalir;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
     }
 }
 

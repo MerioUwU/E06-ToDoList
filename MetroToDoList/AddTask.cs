@@ -29,8 +29,8 @@ namespace MetroToDoList
 
         private void MBAdd_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Informaicon almacenada");
-            Dispose();
+            MessageBox.Show("Informacion almacenada");
+            this.Hide();
         }
        
     }
